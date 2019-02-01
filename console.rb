@@ -14,6 +14,12 @@ movie1 = Movie.new({
 })
 movie1.save()
 
+movie2 = Movie.new({
+  'title' => 'Star Wars V: Empire strikes back',
+  'genre' => 'Sci-fi'
+})
+movie2.save()
+
 star1 = Star.new({
   'first_name' => 'Mark',
   'last_name' => 'Hammil'
@@ -42,6 +48,13 @@ casting2 = Casting.new({
   'fee' => '1250'
   })
 casting2.save
+
+casting3 = Casting.new({
+  'movie_id' => movie2.id,
+  'stars_id' => star2.id,
+  'fee' => '1250'
+  })
+casting3.save
 
 Movie.all()
 Star.all()
